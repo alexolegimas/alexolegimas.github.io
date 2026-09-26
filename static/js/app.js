@@ -43,7 +43,7 @@
           isActive ? "active-page" : ""
         }">${item.label}</a>`;
       })
-      .join('<span class="link-sep">·</span>');
+      .join("");
   }
 
   function renderHeader() {

@@ -24,17 +24,15 @@ window.ALEX_SITE_DATA = {
       { label: "CV", url: "s/CV-8.pdf" },
       { label: "Google Scholar", url: "https://scholar.google.com/citations?user=P8EMNvkAAAAJ&hl=en" },
       { label: "Chicago Booth", url: "https://www.chicagobooth.edu/faculty/directory/i/alex-imas" },
-      { label: "OSF", url: "http://osf.io/ubvej" }
+      { label: "OSF", url: "http://osf.io/ubvej" },
+      {
+        label: "Program in Behavioral Economics Research",
+        url: "https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/"
+      }
     ],
     siteNav: [
       { id: "home", label: "Home", type: "page" },
-      { id: "teaching", label: "Teaching", type: "page" },
-      {
-        id: "pber",
-        label: "Program in Behavioral Economics Research",
-        url: "https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/",
-        type: "external"
-      }
+      { id: "teaching", label: "Teaching", type: "page" }
     ],
     bioParagraphs: [
       "Alex studies the economics of artificial intelligence and technological change. His research explores how AI reshapes productivity, labor markets, and creative work, how people and organizations adopt AI tools, and how agentic systems interact with existing economic and social institutions. He also studies behavioral economics, with a focus on how people understand and mentally represent the choices they are facing — including how they learn and make decisions under risk and uncertainty. Alex's work utilizes a variety of methods, including controlled laboratory experiments, field experiments, analysis of observational data, and theoretical modeling.",

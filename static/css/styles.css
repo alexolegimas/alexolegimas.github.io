@@ -115,10 +115,9 @@ a {
 .site-top-nav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.65rem;
+  gap: 1.65rem;
   font-family: var(--font-sans);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
 }
 
 .site-nav-item {
@@ -130,7 +129,7 @@ a {
 
 .site-nav-item:hover {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
 }
 
 .site-nav-item.active-page {
