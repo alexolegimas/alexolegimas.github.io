@@ -102,6 +102,66 @@ window.ALEX_SITE_DATA = {
       "items": [
         {
           "id": "AI1",
+          "title": "Economic Policy for AGI",
+          "coauthors": "with J. Jacobs",
+          "venue": "Working Paper",
+          "badges": [
+            "New Paper"
+          ],
+          "abstract": "Advanced artificial intelligence could raise productive capacity while weakening the link through which most households receive the gains from growth: labour income. This paper compares eleven household-facing policies intended to cushion displacement and distribute gains, together with thirteen scored revenue and governance mechanisms and an additional unscored data-compensation institution. It is designed as a comprehensive policy map rather than an evaluation of one favoured instrument in isolation. The analysis supports a functionally differentiated core: Unemployment Insurance for identifiable displacement through an existing institution, a Negative Income Tax for a broad earnings-responsive income floor, and Universal Basic Capital for direct ownership of productive assets. Complementary policies vary by phase, while financing is best diversified across broad profit, capital-gain, income, land, and contingent public-equity bases. The paper does not claim that scores determine policy mechanically or that the proposed package is fiscally closed; it identifies the institutional functions, trade-offs, and preparatory steps that robust AGI policy requires.",
+          "links": [
+            {
+              "label": "Working Paper",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7470000"
+            },
+            {
+              "label": "Essay",
+              "url": "https://institute.deepmind.com/essays/economic-policy-for-agi/"
+            }
+          ]
+        },
+        {
+          "id": "AI2",
+          "title": "AI in Science: Early Insights",
+          "coauthors": "with M. Codreanu, J. Mateos-Garcia, et al.",
+          "venue": "Working Paper",
+          "badges": [
+            "New Paper"
+          ],
+          "abstract": "Scientific progress is a key driver of economic growth and prosperity. There is great excitement—but also concerns—about the impacts of AI on science, but so far little data. We provide early insights on this from three data sources: a sample of 15 million Gemini interactions, an inventory of over 2,600 specialized AI models across disciplines, and a survey of over 600 scientists. We map these data to a new taxonomy of scientific tasks to study how scientists are using AI. Four main findings emerge. First, we find broad adoption and coverage: scientists use AI more than most other occupations. Specialized AI models have broad disciplinary coverage and are highly cited. Nearly half of the scientists surveyed report using some form of AI every day. Second, we document evidence that LLMs (proxied through Gemini usage) and specialized models act as complements—LLMs are used for general analysis, coding, and manuscript preparation, while specialized models provide domain-specific predictions, data generation and classification. Third, scientists report large productivity gains from using AI: a saving of nearly 7 hours per week, time which is primarily re-invested in more research. Finally, we show that AI is already changing the scientific process. As some stages of scientific research become easier, bottlenecks shift downstream. Scientists report an increased backlog of untested hypotheses and substantial demand for output verification. Our findings suggest that AI holds significant potential to increase scientific productivity. However, as with other sectors, its ultimate impact will be governed by complex task interdependencies and investment into the elimination of emerging bottlenecks.",
+          "links": [
+            {
+              "label": "Working Paper",
+              "url": "https://arxiv.org/abs/2609.28504"
+            },
+            {
+              "label": "PDF",
+              "url": "https://ai.google/static/documents/AI-in-Science.pdf"
+            }
+          ]
+        },
+        {
+          "id": "AI3",
+          "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
+          "coauthors": "with Z. Iscenko, S. Strand, et al.",
+          "venue": "Working Paper",
+          "badges": [
+            "New Paper"
+          ],
+          "abstract": "This paper introduces the AI & Economy ATLAS (Activity, Task, Landscape, and Adoption Study), an ongoing economic research initiative using Google AI usage data. The first iteration of ATLAS is built on 15 million de-identified interactions across the Gemini App, Google AI Mode, and Gemini API. Using privacy-preserving algorithms as well as established and bespoke classification methods, we map AI usage to over 800 occupations, 4000 tasks, 300 household activities, 150 countries, and 140 languages. We then make a number of observations on what the data reveals about AI's diffusion, and its usage at work and in day-to-day life. In the workplace, we show that while AI adoption spans occupations covering just above 88% of US employment, penetration remains shallow and overwhelmingly collaborative in nature, with end-to-end task automation limited in scope. Outside of work, AI spans activities making up about 98% of Americans' non-sleep time, with disproportionately high use in high-friction tasks such as engaging with government and professional service providers, likely delivering economic value that standard national accounts may miss. Globally, adoption scales with national wealth and has broad linguistic distribution, with English queries representing only around a third of volume. As we build upon ATLAS and expand its scope and capabilities, we will continue to provide large-scale empirical evidence to inform the public, policy and academic questions about the ongoing AI transformation.",
+          "links": [
+            {
+              "label": "Working Paper",
+              "url": "https://arxiv.org/abs/2608.00038"
+            },
+            {
+              "label": "PDF",
+              "url": "https://ai.google/static/documents/GoogleATLASv1.pdf"
+            }
+          ]
+        },
+        {
+          "id": "AI4",
           "title": "Agentic Interactions",
           "coauthors": "with K. Lee and S. Misra",
           "venue": "Working Paper",
@@ -117,7 +177,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI2",
+          "id": "AI5",
           "title": "Art and the Machine: Why People Devalue AI-Generated Creative Work",
           "coauthors": "with G. Mandel",
           "venue": "Working Paper",
@@ -133,7 +193,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI3",
+          "id": "AI6",
           "title": "Artificial Writing and Automated Detection",
           "coauthors": "with B. Jabarian",
           "venue": "Working Paper",
@@ -149,7 +209,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI4",
+          "id": "AI7",
           "title": "Social Dynamics of AI Adoption",
           "coauthors": "with L. Bursztyn, R. Jimenez-Duran, A. Leonard and C. Roth",
           "venue": "<strong><em>Proceedings of the National Academy of Sciences</em></strong>, 2026",
@@ -165,7 +225,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI5",
+          "id": "AI8",
           "title": "In Their Shoes: Empathy Through Information",
           "coauthors": "with M. Andries, L. Bursztyn, T. Chaney, and M. Djourelova",
           "venue": "<strong><em>Quarterly Journal of Economics</em></strong>, 2026",
@@ -178,7 +238,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI6",
+          "id": "AI9",
           "title": "Underreporting of AI use: The role of social desirability bias",
           "coauthors": "with A. Kale and Y. Ling",
           "venue": "<strong><em>CHI'26</em></strong>",
@@ -191,7 +251,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI7",
+          "id": "AI10",
           "title": "The Language of Discrimination: Using Experimental versus Observational Data",
           "coauthors": "with J. A. Bohren and M. Rosenberg",
           "venue": "<strong><em>American Economic Association: Papers and Proceedings</em></strong>, 2018",
