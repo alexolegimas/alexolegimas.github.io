@@ -5,6 +5,7 @@
 
 (function () {
   const state = {
+    activePage: window.location.hash === "#teaching" ? "teaching" : "home",
     categoryFilter: "all",
     searchQuery: "",
     expandAll: false,
@@ -19,12 +20,50 @@
     renderControls();
     renderAllSections();
     bindEvents();
+
+    window.addEventListener("hashchange", () => {
+      const nextPage = window.location.hash === "#teaching" ? "teaching" : "home";
+      if (nextPage !== state.activePage) {
+        state.activePage = nextPage;
+        renderHeader();
+        renderAllSections();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  }
+
+  function buildSiteNavHtml(p) {
+    return (p.siteNav || [])
+      .map((item) => {
+        if (item.type === "external") {
+          return `<a href="${item.url}" target="_blank" rel="noopener" class="site-nav-item">${item.label} ↗</a>`;
+        }
+        const isActive = state.activePage === item.id;
+        return `<a href="${item.id === "teaching" ? "#teaching" : "#"}" data-page-nav="${item.id}" class="site-nav-item ${
+          isActive ? "active-page" : ""
+        }">${item.label}</a>`;
+      })
+      .join('<span class="link-sep">·</span>');
   }
 
   function renderHeader() {
     const p = window.ALEX_SITE_DATA.profile;
     const introEl = document.getElementById("site-intro");
     if (!introEl || !p) return;
+
+    const siteNavHtml = buildSiteNavHtml(p);
+
+    if (state.activePage === "teaching") {
+      introEl.innerHTML = `
+        <div class="teaching-page-topbar">
+          <h1 class="author-title"><a href="#" data-page-nav="home">${p.name}</a></h1>
+          <nav class="site-top-nav" aria-label="Primary Navigation">
+            ${siteNavHtml}
+          </nav>
+        </div>
+      `;
+      return;
+    }
 
     const rolesHtml = p.roles
       .map(
@@ -56,12 +95,11 @@
       .map((b, i) => `<li data-editable="true" data-ref="BULLET-${i + 1}">${b}</li>`)
       .join("");
 
-    const navLinksHtml = [
-      ...window.ALEX_SITE_DATA.sections.map(
+    const navLinksHtml = window.ALEX_SITE_DATA.sections
+      .map(
         (s) => `<a href="#${s.id}"><span class="nav-num">${s.num}</span>${s.shortLabel || s.title}</a>`
-      ),
-      `<a href="#teaching"><span class="nav-num">08</span>Teaching</a>`
-    ].join("");
+      )
+      .join("");
 
     introEl.innerHTML = `
       <div class="profile-grid">
@@ -69,6 +107,9 @@
         <div class="profile-meta">
           <div class="name-contact-row">
             <h1 class="author-title" data-editable="true" data-ref="PROFILE-NAME">${p.name}</h1>
+            <nav class="site-top-nav" aria-label="Primary Navigation">
+              ${siteNavHtml}
+            </nav>
           </div>
           <div class="positions-list">${rolesHtml}</div>
           <div class="affiliations-block">${affilsHtml}</div>
@@ -234,6 +275,39 @@
 
     const htmlParts = [];
 
+    if (state.activePage === "teaching") {
+      const t = window.ALEX_SITE_DATA.teaching;
+      if (t) {
+        const curr = t.currentClasses || [];
+        const past = t.pastClasses || [];
+        htmlParts.push(`
+          <section class="minimal-section" id="teaching">
+            <div class="section-head">
+              <h2 class="section-label">${t.title}</h2>
+              <span class="section-meta">${curr.length + past.length} Courses</span>
+            </div>
+            <div class="writing-table-head teaching-grid">
+              <div>Course</div>
+              <div>Term</div>
+              <div>Syllabus</div>
+            </div>
+            <div class="teaching-subhead">Current Classes</div>
+            <div class="writing-list">
+              ${curr.map(renderTeachingRow).join("")}
+            </div>
+            <div class="teaching-subhead">Past Classes Taught</div>
+            <div class="writing-list">
+              ${past.map(renderTeachingRow).join("")}
+            </div>
+            <p class="teaching-note" data-editable="true" data-ref="TEACHING-NOTE">${t.footerNoteHtml}</p>
+          </section>
+        `);
+      }
+      container.innerHTML = htmlParts.join("");
+      syncEditableAttributes();
+      return;
+    }
+
     window.ALEX_SITE_DATA.sections.forEach((sec) => {
       if (state.categoryFilter !== "all" && state.categoryFilter !== sec.id) return;
 
@@ -268,41 +342,6 @@
       `);
     });
 
-    // 08 · Teaching
-    const t = window.ALEX_SITE_DATA.teaching;
-    if (t && (state.categoryFilter === "all" || state.categoryFilter === "teaching")) {
-      const matchTeaching = (c) =>
-        !state.searchQuery ||
-        `${c.course} ${c.term}`.toLowerCase().includes(state.searchQuery.toLowerCase());
-      const curr = t.currentClasses.filter(matchTeaching);
-      const past = t.pastClasses.filter(matchTeaching);
-
-      if (curr.length > 0 || past.length > 0 || !state.searchQuery) {
-        htmlParts.push(`
-          <section class="minimal-section" id="teaching">
-            <div class="section-head">
-              <h2 class="section-label">${t.num} · ${t.title}</h2>
-              <span class="section-meta">${curr.length + past.length} Courses</span>
-            </div>
-            <div class="writing-table-head teaching-grid">
-              <div>Course</div>
-              <div>Term</div>
-              <div>Syllabus</div>
-            </div>
-            <div class="teaching-subhead">Current Classes</div>
-            <div class="writing-list">
-              ${curr.map(renderTeachingRow).join("")}
-            </div>
-            <div class="teaching-subhead">Past Classes Taught</div>
-            <div class="writing-list">
-              ${past.map(renderTeachingRow).join("")}
-            </div>
-            <p class="teaching-note" data-editable="true" data-ref="TEACHING-NOTE">${t.footerNoteHtml}</p>
-          </section>
-        `);
-      }
-    }
-
     container.innerHTML = htmlParts.join("");
     syncEditableAttributes();
   }
@@ -321,6 +360,22 @@
   function bindEvents() {
     document.body.addEventListener("click", (e) => {
       if (state.editMode && e.target.closest('[data-editable="true"]')) return;
+
+      const pageNavBtn = e.target.closest("[data-page-nav]");
+      if (pageNavBtn) {
+        e.preventDefault();
+        const targetPage = pageNavBtn.getAttribute("data-page-nav");
+        state.activePage = targetPage;
+        if (targetPage === "teaching") {
+          history.pushState(null, "", "#teaching");
+        } else {
+          history.pushState(null, "", window.location.pathname);
+        }
+        renderHeader();
+        renderAllSections();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
 
       const catBtn = e.target.closest(".filter-category-trigger");
       if (catBtn) {

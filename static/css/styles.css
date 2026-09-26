@@ -112,19 +112,45 @@ a {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-.contact-inline {
+.site-top-nav {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
 }
 
-.contact-inline a:hover {
+.site-nav-item {
   color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.site-nav-item:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.site-nav-item.active-page {
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.teaching-page-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.teaching-page-topbar .author-title a:hover {
+  opacity: 0.75;
 }
 
 .positions-list {
@@ -597,6 +623,22 @@ a {
   color: var(--text-secondary);
   line-height: 1.45;
   text-align: right;
+}
+
+.writing-venue strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.writing-venue em {
+  font-style: italic;
+}
+
+.writing-venue strong em,
+.writing-venue em strong {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--text);
 }
 
 /* Quiet Literary Margin-Rule Drawer for Abstract & Summary */
