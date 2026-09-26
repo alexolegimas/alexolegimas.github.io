@@ -23,7 +23,7 @@ window.ALEX_SITE_DATA = {
     "primaryLinks": [
       {
         "label": "CV",
-        "url": "s/CV-8.pdf"
+        "url": "s/CV-9.pdf?v=20260926"
       },
       {
         "label": "Google Scholar",
