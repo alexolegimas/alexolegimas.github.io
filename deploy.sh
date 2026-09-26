@@ -10,4 +10,4 @@ sed -i -E "s/\?v=[a-zA-Z0-9_]+/?v=${VER}/g" index.html
 git add -A
 git commit -m "${1:-Update Alex Imas personal website}" || true
 git push origin main
-echo "Deployed to https://alexolegimas.github.io/"
+echo "Deployed to https://www.aleximas.com/"

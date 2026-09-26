@@ -18,7 +18,7 @@ window.ALEX_SITE_DATA = {
     ],
     affiliationsLines: [
       "Co-Director, <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Program in Behavioral Economics Research</a> &amp; <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Arts and Creative Enterprise Program</a>",
-      "NBER Faculty Research Associate &nbsp;·&nbsp; Center for Applied AI &nbsp;·&nbsp; CESifo Research Network Fellow &nbsp;·&nbsp; HCEO Faculty Affiliate"
+      "NBER Faculty Research Associate · Center for Applied AI · CESifo Research Network Fellow · HCEO Faculty Affiliate"
     ],
     primaryLinks: [
       { label: "CV", url: "s/CV-8.pdf" },
