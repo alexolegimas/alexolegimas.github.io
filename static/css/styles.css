@@ -175,11 +175,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.25rem 0.42rem;
+  justify-content: space-between;
+  gap: 0.2rem 0.28rem;
   padding-top: 0.65rem;
   border-top: 1px solid var(--rule);
   font-family: var(--font-sans);
-  font-size: 0.74rem;
+  font-size: 0.715rem;
   color: var(--text-secondary);
 }
 
