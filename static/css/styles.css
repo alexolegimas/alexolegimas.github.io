@@ -63,25 +63,25 @@ a {
    TOP BAR / HEADER PROFILE
    ============================================================================ */
 .site-intro {
-  margin-bottom: 3.75rem;
+  margin-bottom: 3.25rem;
 }
 
 .profile-grid {
   display: grid;
-  grid-template-columns: 148px 1fr;
-  gap: 2.25rem;
+  grid-template-columns: 132px 1fr;
+  gap: 2rem;
   align-items: start;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .profile-portrait {
-  width: 148px;
-  height: 176px;
+  width: 132px;
+  height: 158px;
   object-fit: cover;
   object-position: center top;
   border-radius: 4px;
   border: 1px solid var(--rule);
-  filter: grayscale(12%) contrast(1.02);
+  filter: grayscale(10%) contrast(1.02);
   transition: filter 0.2s ease;
 }
 
@@ -93,143 +93,129 @@ a {
   min-width: 0;
 }
 
+.name-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.55rem;
+}
+
 .author-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 1.1;
-  margin-bottom: 0.85rem;
   font-optical-sizing: auto;
   font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.contact-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.contact-inline a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .positions-list {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  margin-bottom: 0.85rem;
+  gap: 0.2rem;
+  margin-bottom: 0.55rem;
 }
 
 .position-item {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
+  font-weight: 500;
   color: var(--text);
   line-height: 1.45;
 }
 
-.position-item strong {
-  font-weight: 500;
-}
-
-.position-item a {
+.position-item a:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--rule-strong);
 }
 
-.position-item a:hover {
-  color: var(--text);
+.leave-tag {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.82rem;
 }
 
-.leave-badge {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 0.08rem 0.42rem;
-  border: 1px solid var(--rule-strong);
-  border-radius: 3px;
-  margin-left: 0.35rem;
-  vertical-align: middle;
-}
-
-.affiliations-line {
-  font-size: 0.83rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
+.affiliations-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
   margin-bottom: 0.85rem;
 }
 
-.affiliations-line a {
+.affil-row {
+  font-size: 0.81rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+.affil-row a:hover {
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--rule);
 }
 
-.affiliations-line a:hover {
-  text-decoration-color: var(--text);
-}
-
-.contact-bar {
+.header-links-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 1.25rem;
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.1rem;
-}
-
-.contact-bar a:hover {
-  color: var(--text);
-  text-decoration: underline;
-}
-
-.action-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.action-pill {
-  display: inline-flex;
-  align-items: center;
+  gap: 0.25rem 0.42rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--rule);
   font-family: var(--font-sans);
   font-size: 0.74rem;
-  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.header-link {
   color: var(--text);
-  background: var(--bg);
-  border: 1px solid var(--rule-strong);
-  padding: 0.26rem 0.68rem;
-  border-radius: 999px;
-  transition: all 0.15s ease;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
 }
 
-.action-pill:hover {
-  background: var(--text);
-  color: var(--bg);
+.header-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-.action-pill.primary-pill {
-  background: var(--text);
-  color: var(--bg);
-}
-
-.action-pill.primary-pill:hover {
-  opacity: 0.86;
+.link-sep {
+  color: var(--text-muted);
 }
 
 /* ============================================================================
-   BIOGRAPHY & QUICK LINKS BLOCK
+   BIOGRAPHY BLOCK
    ============================================================================ */
 .bio-block {
-  padding-top: 1.5rem;
+  padding-top: 1.35rem;
   border-top: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
+}
+
+.bio-prose {
+  width: 100%;
 }
 
 .bio-prose p {
-  font-size: 0.91rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.68;
-  margin-bottom: 0.9rem;
+  line-height: 1.66;
+  margin-bottom: 0.75rem;
 }
 
 .bio-prose p:last-child {
@@ -241,38 +227,30 @@ a {
   font-style: italic;
 }
 
-.quick-notes {
-  border-left: 1px solid var(--rule);
-  padding-left: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  font-size: 0.83rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-}
-
-.quick-note-item a {
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
+.bio-prose a {
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 3px;
-  margin-left: 0.25rem;
+  text-decoration-color: var(--rule-strong);
+}
+
+.bio-prose a:hover {
+  text-decoration-color: var(--text);
 }
 
 /* ============================================================================
    MINIMAL NAVIGATION BAR
    ============================================================================ */
 .minimal-nav {
-  margin-top: 2rem;
-  padding-top: 1.15rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--rule-strong);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem 1.4rem;
+  justify-content: space-between;
+  gap: 0.4rem 0.55rem;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   color: var(--text-secondary);
 }
 

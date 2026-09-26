@@ -30,39 +30,26 @@
       .map(
         (r, i) => `
       <div class="position-item" data-editable="true" data-ref="ROLE-${i + 1}">
-        <strong>${r.title}</strong>, <a href="${r.url}" target="_blank" rel="noopener">${r.org}</a>
-        ${r.note ? `<span class="leave-badge">${r.note}</span>` : ""}
+        ${r.text}
       </div>
     `
       )
       .join("");
 
-    const affilsHtml = p.affiliations
-      .map((a) => `${a.role}, <a href="${a.url}" target="_blank" rel="noopener">${a.org}</a>`)
-      .join(" &nbsp;·&nbsp; ");
-
-    const pillsHtml = p.primaryLinks
+    const affilsHtml = (p.affiliationsLines || [])
       .map(
-        (l, idx) =>
-          `<a href="${l.url}" target="_blank" rel="noopener" class="action-pill ${
-            idx < 2 ? "primary-pill" : ""
-          }">${l.label} ↗</a>`
+        (line, i) => `<div class="affil-row" data-editable="true" data-ref="AFFIL-${i + 1}">${line}</div>`
       )
       .join("");
+
+    const linksHtml = p.primaryLinks
+      .map(
+        (l) => `<a href="${l.url}" target="_blank" rel="noopener" class="header-link">${l.label} ↗</a>`
+      )
+      .join('<span class="link-sep">·</span>');
 
     const bioHtml = p.bioParagraphs
       .map((para, i) => `<p data-editable="true" data-ref="BIO-P${i + 1}">${para}</p>`)
-      .join("");
-
-    const quickNotesHtml = p.quickNotes
-      .map(
-        (q, i) => `
-      <div class="quick-note-item" data-editable="true" data-ref="NOTE-${i + 1}">
-        <span>${q.text}</span>
-        ${q.url ? `<a href="${q.url}" target="_blank" rel="noopener">[${q.label}]</a>` : ""}
-      </div>
-    `
-      )
       .join("");
 
     const navLinksHtml = [
@@ -76,23 +63,22 @@
       <div class="profile-grid">
         <img src="${p.portrait}" alt="${p.name}" class="profile-portrait" />
         <div class="profile-meta">
-          <h1 class="author-title" data-editable="true" data-ref="PROFILE-NAME">${p.name}</h1>
-          <div class="positions-list">${rolesHtml}</div>
-          <div class="affiliations-line" data-editable="true" data-ref="PROFILE-AFFILS">${affilsHtml}</div>
-          <div class="contact-bar">
-            <span data-editable="true" data-ref="PROFILE-INTERESTS">Research Interests: ${p.researchInterests}</span>
-            <span>·</span>
-            <span data-editable="true" data-ref="PROFILE-PHONE">${p.phone}</span>
-            <span>·</span>
-            <a href="mailto:${p.email}" data-editable="true" data-ref="PROFILE-EMAIL">${p.email}</a>
+          <div class="name-contact-row">
+            <h1 class="author-title" data-editable="true" data-ref="PROFILE-NAME">${p.name}</h1>
+            <div class="contact-inline">
+              <a href="mailto:${p.email}" data-editable="true" data-ref="PROFILE-EMAIL">${p.email}</a>
+              <span>·</span>
+              <span data-editable="true" data-ref="PROFILE-PHONE">${p.phone}</span>
+            </div>
           </div>
-          <div class="action-pills">${pillsHtml}</div>
+          <div class="positions-list">${rolesHtml}</div>
+          <div class="affiliations-block">${affilsHtml}</div>
+          <div class="header-links-bar">${linksHtml}</div>
         </div>
       </div>
 
       <div class="bio-block">
         <div class="bio-prose">${bioHtml}</div>
-        <div class="quick-notes">${quickNotesHtml}</div>
       </div>
 
       <nav class="minimal-nav" aria-label="Sections">

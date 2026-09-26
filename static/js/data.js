@@ -9,84 +9,30 @@ window.ALEX_SITE_DATA = {
     portrait: "s/Small.jpg",
     roles: [
       {
-        title: "Director of AGI Economics",
-        org: "Google DeepMind",
-        url: "https://alexolegimas.github.io/agi-economics-lab/"
+        text: "Director of AGI Economics, <a href=\"https://alexolegimas.github.io/agi-economics-lab/\" target=\"_blank\" rel=\"noopener\">Google DeepMind</a>"
       },
       {
-        title: "Roger L. and Rachel M. Goetz Professor of Behavioral Science, Economics, and Applied AI · Vasilou Faculty Scholar",
-        org: "University of Chicago, Booth School of Business",
-        url: "https://www.chicagobooth.edu/faculty/directory/i/alex-imas",
-        note: "ON LEAVE"
+        text: "Roger L. and Rachel M. Goetz Professor of Behavioral Science, Economics, and Applied AI · Vasilou Faculty Scholar, <a href=\"https://www.chicagobooth.edu/faculty/directory/i/alex-imas\" target=\"_blank\" rel=\"noopener\">University of Chicago Booth School of Business</a> <span class=\"leave-tag\">(On Leave)</span>"
       }
     ],
-    affiliations: [
-      {
-        role: "Co-Director",
-        org: "Program in Behavioral Economics Research",
-        url: "https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/"
-      },
-      {
-        role: "Co-Director",
-        org: "Arts and Creative Enterprise Program",
-        url: "https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/"
-      },
-      {
-        role: "Faculty Research Associate",
-        org: "NBER",
-        url: "https://www.nber.org/people/alex_imas"
-      },
-      {
-        role: "Faculty Affiliate",
-        org: "Center for Applied AI",
-        url: "https://www.chicagobooth.edu/research/center-for-applied-artificial-intelligence"
-      },
-      {
-        role: "Research Network Fellow",
-        org: "CESifo",
-        url: "https://www.cesifo.org/en/network-member/imas-alex"
-      },
-      {
-        role: "Faculty Affiliate",
-        org: "Human Capital & Economic Opportunity (HCEO)",
-        url: "https://hceconomics.uchicago.edu/"
-      }
+    affiliationsLines: [
+      "Co-Director, <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Program in Behavioral Economics Research</a> &amp; <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Arts and Creative Enterprise Program</a>",
+      "NBER Faculty Research Associate &nbsp;·&nbsp; Center for Applied AI &nbsp;·&nbsp; CESifo Research Network Fellow &nbsp;·&nbsp; HCEO Faculty Affiliate"
     ],
-    researchInterests: "Behavioral Economics, Applied AI",
-    phone: "(224) 392-3669",
     email: "alex.imas@chicagobooth.edu",
+    phone: "(224) 392-3669",
     primaryLinks: [
       { label: "CV", url: "s/CV-8.pdf" },
       { label: "Google Scholar", url: "https://scholar.google.com/citations?user=P8EMNvkAAAAJ&hl=en" },
-      { label: "Ghosts of Electricity (Substack)", url: "https://aleximas.substack.com/" },
-      { label: "AGI Economics Lab @GoogleDeepMind", url: "https://alexolegimas.github.io/agi-economics-lab/" },
+      { label: "Ghosts of Electricity", url: "https://aleximas.substack.com/" },
+      { label: "AGI Economics Lab", url: "https://alexolegimas.github.io/agi-economics-lab/" },
       { label: "Research Statement", url: "s/Research-Statement-zgn9.pdf" },
-      { label: "Chicago Booth Webpage", url: "https://www.chicagobooth.edu/faculty/directory/i/alex-imas" },
-      { label: "Open Science Framework", url: "http://osf.io/ubvej" }
+      { label: "Chicago Booth", url: "https://www.chicagobooth.edu/faculty/directory/i/alex-imas" },
+      { label: "OSF", url: "http://osf.io/ubvej" }
     ],
     bioParagraphs: [
-      "Alex studies the economics of artificial intelligence and technological change. His research explores how AI reshapes productivity, labor markets, and creative work, how people and organizations adopt AI tools; and how agentic systems interact with existing economic and social institutions. He also studies behavioral economics, with a focus on how people understand and mentally represent the choices they are facing — including how they learn and make decisions under risk and uncertainty. Alex's work utilizes a variety of methods, including controlled laboratory experiments, field experiments, analysis of observational data and theoretical modeling.",
+      "Alex studies the economics of artificial intelligence and technological change. His research explores how AI reshapes productivity, labor markets, and creative work, how people and organizations adopt AI tools, and how agentic systems interact with existing economic and social institutions. He also studies behavioral economics, with a focus on how people understand and mentally represent the choices they are facing — including how they learn and make decisions under risk and uncertainty. Alex's work utilizes a variety of methods, including controlled laboratory experiments, field experiments, analysis of observational data, and theoretical modeling.",
       "Alex Imas is the recipient of the 2023 Alfred P. Sloan Research Fellowship, the Review of Financial Studies Rising Scholar Award, the New Investigator Award from the Behavioral Science and Policy Association, the Hillel Einhorn New Investigator Award from the Society of Judgment and Decision Making, the Distinguished CESifo Affiliate Award, and the NSF Graduate Research Fellowship. He is the co-author, with Richard Thaler, of <em>The Winner’s Curse: Behavioral Economics Anomalies, Then and Now</em>. He is an Associate Editor at the <em>Journal of the European Economic Association</em> and on the editorial board of <em>Psychological Science</em>."
-    ],
-    quickNotes: [
-      {
-        text: "Alex writes regular essays on AI, tech, and economics for his newsletter <em>Ghosts of Electricity</em>:",
-        label: "Link ↗",
-        url: "https://aleximas.substack.com/"
-      },
-      {
-        text: "An overview of his research agenda can be found here:",
-        label: "Link ↗",
-        url: "s/Research-Statement-zgn9.pdf"
-      },
-      {
-        text: "His faculty webpage can be found here:",
-        label: "Link ↗",
-        url: "https://www.chicagobooth.edu/faculty/directory/i/alex-imas"
-      },
-      {
-        text: "Data, experimental instructions and supplementary materials for all published papers can be accessed on his <a href=\"http://osf.io/ubvej\" target=\"_blank\" rel=\"noopener\" style=\"text-decoration:underline; text-underline-offset:3px;\">Open Science Framework profile</a> or the journal’s website."
-      }
     ]
   },
 
