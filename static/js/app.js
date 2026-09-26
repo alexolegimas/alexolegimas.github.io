@@ -29,7 +29,7 @@
     const rolesHtml = p.roles
       .map(
         (r, i) => `
-      <div class="position-item" data-editable="true" data-ref="ROLE-${i + 1}">
+      <div class="position-item ${r.prominent ? "prominent-role" : ""}" data-editable="true" data-ref="ROLE-${i + 1}">
         ${r.text}
       </div>
     `
@@ -52,6 +52,10 @@
       .map((para, i) => `<p data-editable="true" data-ref="BIO-P${i + 1}">${para}</p>`)
       .join("");
 
+    const bulletsHtml = (p.featuredBullets || [])
+      .map((b, i) => `<li data-editable="true" data-ref="BULLET-${i + 1}">${b}</li>`)
+      .join("");
+
     const navLinksHtml = [
       ...window.ALEX_SITE_DATA.sections.map(
         (s) => `<a href="#${s.id}"><span class="nav-num">${s.num}</span>${s.shortLabel || s.title}</a>`
@@ -65,11 +69,6 @@
         <div class="profile-meta">
           <div class="name-contact-row">
             <h1 class="author-title" data-editable="true" data-ref="PROFILE-NAME">${p.name}</h1>
-            <div class="contact-inline">
-              <a href="mailto:${p.email}" data-editable="true" data-ref="PROFILE-EMAIL">${p.email}</a>
-              <span>·</span>
-              <span data-editable="true" data-ref="PROFILE-PHONE">${p.phone}</span>
-            </div>
           </div>
           <div class="positions-list">${rolesHtml}</div>
           <div class="affiliations-block">${affilsHtml}</div>
@@ -79,6 +78,7 @@
 
       <div class="bio-block">
         <div class="bio-prose">${bioHtml}</div>
+        ${bulletsHtml ? `<ul class="featured-bullets">${bulletsHtml}</ul>` : ""}
       </div>
 
       <nav class="minimal-nav" aria-label="Sections">

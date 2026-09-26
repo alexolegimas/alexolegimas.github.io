@@ -130,15 +130,28 @@ a {
 .positions-list {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.22rem;
   margin-bottom: 0.55rem;
 }
 
 .position-item {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text);
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: var(--text-secondary);
   line-height: 1.45;
+}
+
+.position-item.prominent-role {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.008em;
+  margin-bottom: 0.08rem;
+}
+
+.position-item.prominent-role strong {
+  font-weight: 700;
+  color: var(--text);
 }
 
 .position-item a:hover {
@@ -175,12 +188,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.2rem 0.28rem;
+  justify-content: flex-start;
+  gap: 0.3rem 0.65rem;
   padding-top: 0.65rem;
   border-top: 1px solid var(--rule);
   font-family: var(--font-sans);
-  font-size: 0.715rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
 }
 
@@ -237,6 +250,40 @@ a {
 
 .bio-prose a:hover {
   text-decoration-color: var(--text);
+}
+
+.featured-bullets {
+  margin: 1.05rem 0 0 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+  list-style-type: disc;
+}
+
+.featured-bullets li {
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.55;
+  padding-left: 0.2rem;
+}
+
+.featured-bullets li::marker {
+  color: var(--text);
+}
+
+.featured-bullets a {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--text);
+  transition: opacity 0.15s ease;
+}
+
+.featured-bullets a:hover {
+  opacity: 0.72;
 }
 
 /* ============================================================================
