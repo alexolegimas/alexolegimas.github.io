@@ -7,39 +7,21 @@ window.ALEX_SITE_DATA = {
   "profile": {
     "name": "Alex Imas",
     "portrait": "s/Small.jpg",
-    "roles": [
+    "ledgerRows": [
       {
-        "prominent": true,
-        "text": "<strong>Director of AGI Economics, <a href=\"https://alexolegimas.github.io/agi-economics-lab/\" target=\"_blank\" rel=\"noopener\">Google DeepMind</a></strong>"
+        "institution": "<a href=\"https://alexolegimas.github.io/agi-economics-lab/\" target=\"_blank\" rel=\"noopener\">Google DeepMind</a>",
+        "role": "Director of AGI Economics",
+        "primary": true
       },
       {
-        "text": "Roger L. and Rachel M. Goetz Professor of Behavioral Science, Economics, and Applied AI · Vasilou Faculty Scholar, <a href=\"https://www.chicagobooth.edu/faculty/directory/i/alex-imas\" target=\"_blank\" rel=\"noopener\">University of Chicago Booth School of Business</a> <span class=\"leave-tag\">(On Leave)</span>"
-      }
-    ],
-    "affiliationsLines": [
-      "Co-Director, <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Program in Behavioral Economics Research</a> &amp; <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">Arts and Creative Enterprise Program</a>",
-      "NBER Faculty Research Associate · Center for Applied AI · CESifo Research Network Fellow · HCEO Faculty Affiliate"
-    ],
-    "primaryLinks": [
-      {
-        "label": "CV",
-        "url": "s/CV-10.pdf?v=20260926"
+        "institution": "<a href=\"https://www.chicagobooth.edu/faculty/directory/i/alex-imas\" target=\"_blank\" rel=\"noopener\">UChicago Booth</a>",
+        "role": "Goetz Professor of Behavioral Science, Economics &amp; Applied AI <span class=\"leave-tag\">(On Leave)</span>",
+        "primary": true
       },
       {
-        "label": "Google Scholar",
-        "url": "https://scholar.google.com/citations?user=P8EMNvkAAAAJ&hl=en"
-      },
-      {
-        "label": "Chicago Booth",
-        "url": "https://www.chicagobooth.edu/faculty/directory/i/alex-imas"
-      },
-      {
-        "label": "OSF",
-        "url": "http://osf.io/ubvej"
-      },
-      {
-        "label": "Program in Behavioral Economics Research",
-        "url": "https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/"
+        "institution": "Affiliations",
+        "role": "NBER &nbsp;·&nbsp; <a href=\"https://bfi.uchicago.edu/entities/program-in-behavioral-economics-research/\" target=\"_blank\" rel=\"noopener\">BFI Behavioral Economics</a> (Co-Director) &nbsp;·&nbsp; Center for Applied AI &nbsp;·&nbsp; CESifo",
+        "primary": false
       }
     ],
     "siteNav": [
@@ -52,13 +34,22 @@ window.ALEX_SITE_DATA = {
         "id": "teaching",
         "label": "Teaching",
         "type": "page"
+      },
+      {
+        "label": "CV",
+        "url": "s/CV-10.pdf?v=20260926",
+        "type": "external"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=P8EMNvkAAAAJ&hl=en",
+        "type": "external"
       }
     ],
     "bioParagraphs": [
-      "Alex studies the economics of artificial intelligence and technological change. His research explores how AI reshapes productivity, labor markets, and creative work, how people and organizations adopt AI tools, and how agentic systems interact with existing economic and social institutions. He also studies behavioral economics, with a focus on how people understand and mentally represent the choices they are facing — including how they learn and make decisions under risk and uncertainty. Alex's work utilizes a variety of methods, including controlled laboratory experiments, field experiments, analysis of observational data, and theoretical modeling.",
-      "Alex Imas is the recipient of the 2023 Alfred P. Sloan Research Fellowship, the Review of Financial Studies Rising Scholar Award, the New Investigator Award from the Behavioral Science and Policy Association, the Hillel Einhorn New Investigator Award from the Society of Judgment and Decision Making, the Distinguished CESifo Affiliate Award, and the NSF Graduate Research Fellowship. He is the co-author, with Richard Thaler, of <strong><em>The Winner’s Curse: Behavioral Economics Anomalies, Then and Now</em></strong>. He is an Associate Editor at the <strong><em>Journal of the European Economic Association</em></strong> and on the editorial board of <strong><em>Psychological Science</em></strong>."
+      "Alex studies the economics of artificial intelligence and technological change, as well as behavioral economics and mental representations in decision-making. Co-author, with Richard Thaler, of <strong><em>The Winner’s Curse: Behavioral Economics Anomalies, Then and Now</em></strong>."
     ],
-    "featuredBullets": [
+    "featuredLines": [
       "Alex regularly writes essays on AI, technology, and economics on Substack at <a href=\"https://aleximas.substack.com/\" target=\"_blank\" rel=\"noopener\"><strong>Ghosts of Electricity ↗</strong></a>.",
       "Alex runs the <a href=\"https://alexolegimas.github.io/agi-economics-lab/\" target=\"_blank\" rel=\"noopener\"><strong>AGI Economics Lab at Google DeepMind ↗</strong></a>."
     ]

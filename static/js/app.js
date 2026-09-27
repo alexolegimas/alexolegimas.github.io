@@ -65,34 +65,23 @@
       return;
     }
 
-    const rolesHtml = p.roles
+    const ledgerHtml = (p.ledgerRows || [])
       .map(
         (r, i) => `
-      <div class="position-item ${r.prominent ? "prominent-role" : ""}" data-editable="true" data-ref="ROLE-${i + 1}">
-        ${r.text}
+      <div class="ledger-row ${r.primary ? "ledger-primary" : "ledger-secondary"}" data-editable="true" data-ref="LEDGER-${i + 1}">
+        <span class="ledger-inst">${r.institution}</span>
+        <span class="ledger-role">${r.role}</span>
       </div>
     `
       )
       .join("");
 
-    const affilsHtml = (p.affiliationsLines || [])
-      .map(
-        (line, i) => `<div class="affil-row" data-editable="true" data-ref="AFFIL-${i + 1}">${line}</div>`
-      )
-      .join("");
-
-    const linksHtml = p.primaryLinks
-      .map(
-        (l) => `<a href="${l.url}" target="_blank" rel="noopener" class="header-link">${l.label} ↗</a>`
-      )
-      .join('<span class="link-sep">·</span>');
-
-    const bioHtml = p.bioParagraphs
+    const bioHtml = (p.bioParagraphs || [])
       .map((para, i) => `<p data-editable="true" data-ref="BIO-P${i + 1}">${para}</p>`)
       .join("");
 
-    const bulletsHtml = (p.featuredBullets || [])
-      .map((b, i) => `<li data-editable="true" data-ref="BULLET-${i + 1}">${b}</li>`)
+    const featuredLinesHtml = (p.featuredLines || [])
+      .map((line, i) => `<div class="featured-line-item" data-editable="true" data-ref="LINE-${i + 1}">${line}</div>`)
       .join("");
 
     const navLinksHtml = window.ALEX_SITE_DATA.sections
@@ -111,15 +100,13 @@
               ${siteNavHtml}
             </nav>
           </div>
-          <div class="positions-list">${rolesHtml}</div>
-          <div class="affiliations-block">${affilsHtml}</div>
-          <div class="header-links-bar">${linksHtml}</div>
+          <div class="swiss-ledger">${ledgerHtml}</div>
         </div>
       </div>
 
       <div class="bio-block">
         <div class="bio-prose">${bioHtml}</div>
-        ${bulletsHtml ? `<ul class="featured-bullets">${bulletsHtml}</ul>` : ""}
+        ${featuredLinesHtml ? `<div class="featured-lines">${featuredLinesHtml}</div>` : ""}
       </div>
 
       <nav class="minimal-nav" aria-label="Sections">
