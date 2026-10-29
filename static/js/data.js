@@ -93,6 +93,22 @@ window.ALEX_SITE_DATA = {
       "items": [
         {
           "id": "AI1",
+          "title": "Organizing Intelligence",
+          "coauthors": "with A. Koh and S. Legg",
+          "venue": "Working Paper",
+          "badges": [
+            "New Paper"
+          ],
+          "abstract": "When will advances in AI lead to economic transformation? We develop a model of how intelligence, the ability to achieve goals, matters for organizations, the key unit of economic production. Agents (human or AI) with multidimensional capabilities sort endogenously into competing firms. A firm's productivity depends on its agents' capabilities; we distinguish competence, which shifts productivity levels, from coordination, which governs how productivity scales with size. Two differences between AI and humans drive transformation: AI expertise is reproducible while humans' are in fixed supply, and AIs may not face the same limits for coordination as humans. We analyze how equilibrium market structure, productivity, employment, and wages evolve as AI capabilities improve. When AI is more capable than the average human, organizations of complementary humans can nonetheless outperform AI. Increases in AI competence can change the composition of workers within firms and decrease firm size. As AI coordination improves, however, this can break the Coasean ceiling on firm size and the market structure undergoes a phase transition toward large, concentrated AI-heavy firms. Changes in human employment are gradual when AI displaces workers within mixed human-AI firms, or sudden when AI firms outcompete human firms. We decompose wage changes into a technology effect, which changes the value of humans within existing firms, and a reorganization effect as firms adjust size and composition. Reorganization can reverse the technology effect on wages.",
+          "links": [
+            {
+              "label": "Working Paper",
+              "url": "https://storage.googleapis.com/deepmind-media/papers/organizing-intelligence.pdf"
+            }
+          ]
+        },
+        {
+          "id": "AI2",
           "title": "Economic Policy for AGI",
           "coauthors": "with J. Jacobs",
           "venue": "Working Paper",
@@ -112,7 +128,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI2",
+          "id": "AI3",
           "title": "AI in Science: Early Insights",
           "coauthors": "with M. Codreanu, J. Mateos-Garcia, et al.",
           "venue": "Working Paper",
@@ -132,7 +148,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI3",
+          "id": "AI4",
           "title": "Google's AI & Economy ATLAS v1.0: Mapping Gemini Usage in the Economy",
           "coauthors": "with Z. Iscenko, S. Strand, et al.",
           "venue": "Working Paper",
@@ -152,7 +168,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI4",
+          "id": "AI5",
           "title": "Agentic Interactions",
           "coauthors": "with K. Lee and S. Misra",
           "venue": "Working Paper",
@@ -168,7 +184,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI5",
+          "id": "AI6",
           "title": "Art and the Machine: Why People Devalue AI-Generated Creative Work",
           "coauthors": "with G. Mandel",
           "venue": "Working Paper",
@@ -184,7 +200,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI6",
+          "id": "AI7",
           "title": "Artificial Writing and Automated Detection",
           "coauthors": "with B. Jabarian",
           "venue": "Working Paper",
@@ -200,7 +216,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI7",
+          "id": "AI8",
           "title": "Social Dynamics of AI Adoption",
           "coauthors": "with L. Bursztyn, R. Jimenez-Duran, A. Leonard and C. Roth",
           "venue": "<strong><em>Proceedings of the National Academy of Sciences</em></strong>, 2026",
@@ -216,7 +232,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI8",
+          "id": "AI9",
           "title": "In Their Shoes: Empathy Through Information",
           "coauthors": "with M. Andries, L. Bursztyn, T. Chaney, and M. Djourelova",
           "venue": "<strong><em>Quarterly Journal of Economics</em></strong>, 2026",
@@ -229,7 +245,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI9",
+          "id": "AI10",
           "title": "Underreporting of AI use: The role of social desirability bias",
           "coauthors": "with A. Kale and Y. Ling",
           "venue": "<strong><em>CHI'26</em></strong>",
@@ -242,7 +258,7 @@ window.ALEX_SITE_DATA = {
           ]
         },
         {
-          "id": "AI10",
+          "id": "AI11",
           "title": "The Language of Discrimination: Using Experimental versus Observational Data",
           "coauthors": "with J. A. Bohren and M. Rosenberg",
           "venue": "<strong><em>American Economic Association: Papers and Proceedings</em></strong>, 2018",
